@@ -220,7 +220,7 @@ const AboutSummarySection = ({ setPage }: { setPage: (page: PageState) => void }
                         <div className="relative w-full max-w-md md:max-w-lg">
                             <div className="relative shadow-2xl aspect-square">
                                 <img
-                                    src="https://i.postimg.cc/rmjr0sjz/1771414264940.jpg"
+                                    src="https://i.postimg.cc/SNHDN7fp/1771414264978.jpg"
                                     alt="Attorney"
                                     className="w-full h-full object-cover object-center"
                                 />
@@ -375,7 +375,7 @@ const teamExperts = [
         name: 'Simon Mangena',
         title: 'Founder & Director',
         bio: 'With over 20 years of experience, Simon leads our firm with a passion for justice and an unwavering commitment to our clients.',
-        image: 'https://i.postimg.cc/bNtw4dn0/mr-mangena.jpg',
+        image: 'https://i.postimg.cc/WbqwKqLg/1771414264959.jpg',
         socials: { instagram: '#', linkedin: '#', facebook: '#', twitter: '#' },
     },
     {
