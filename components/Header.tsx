@@ -25,7 +25,7 @@ export const Header = ({ setPage, page }: { setPage: (page: { name: string }) =>
         };
     }, [isMobileMenuOpen]);
 
-    const navLinks = ["About", "Services", "Case Studies", "Careers", "Blog"];
+    const navLinks = ["About", "Services", "Case Studies", "Blog"];
     
     const handleNavClick = (pageName: string) => {
         setPage({ name: pageName });

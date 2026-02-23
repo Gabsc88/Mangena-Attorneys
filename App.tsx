@@ -374,7 +374,7 @@ const teamExperts = [
     {
         name: 'Simon Mangena',
         title: 'Founder & Director',
-        bio: 'With over 20 years of experience, Simon leads our firm with a passion for justice and an unwavering commitment to our clients.',
+        bio: 'With over 16 years of experience, Simon leads our firm with a passion for justice and an unwavering commitment to our clients. Mr Mangena’sarea of practice,under Mangena Attornes Inc,includes Criminal and Civil litigation, Commercial litigation,Labour law, Wills and Estates, Third party claim, Debt Collection, drafting of Legal Opinions and Contracts as wellas Mediation in all its forms with special interest and vast experience in family law.',
         image: 'https://i.postimg.cc/WbqwKqLg/1771414264959.jpg',
         socials: { instagram: '#', linkedin: '#', facebook: '#', twitter: '#' },
     },
