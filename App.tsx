@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, ReactNode, HTMLAttributes, useRef } from 'react';
+import React, { useState, useEffect, ReactNode, HTMLAttributes, useRef, CSSProperties } from 'react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { useScrollAnimation } from './hooks/useScrollAnimation';
@@ -14,13 +14,15 @@ interface PageState {
 // --- Reusable Animated Section Wrapper ---
 interface AnimatedSectionProps extends HTMLAttributes<HTMLDivElement> {
     children: ReactNode;
+    className?: string;
+    style?: CSSProperties;
 }
 
-const AnimatedSection = ({ children, className, ...rest }: AnimatedSectionProps) => {
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children, className, ...rest }) => {
     const [ref, isInView] = useScrollAnimation<HTMLDivElement>();
     return (
         <div
-            ref={ref}
+            ref={ref as any}
             className={`transition-all duration-1000 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} ${className || ''}`}
             {...rest}
         >
@@ -255,12 +257,23 @@ const services = [
     { image: "https://i.postimg.cc/PrH9JqN5/right-4944555-1280.jpg", title: "Legal Protection & Planning", description: "Drafting of contracts and wills, deceased estates administration and debt collection services. And Immigration & Refugee legal matters" },
 ];
 
-const ServicesSummarySection = () => (
+const ServicesSummarySection = ({ setPage }: { setPage: (page: PageState) => void }) => (
     <section id="practices" className="py-20 md:py-32 bg-brand-light text-brand-dark">
         <div className="container mx-auto px-6 max-w-[1440px]">
             <AnimatedSection className="text-left">
-                <h2 className="text-4xl font-serif font-bold text-brand-dark mb-4">Our Services</h2>
-                <p className="text-lg text-brand-dark mb-16 max-w-2xl opacity-80">We offer a broad range of legal services, applying our expertise to achieve the best possible results for you.</p>
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+                    <div className="max-w-2xl">
+                        <h2 className="text-4xl font-serif font-bold text-brand-dark mb-4">Our Services</h2>
+                        <p className="text-lg text-brand-dark opacity-80">We offer a broad range of legal services, applying our expertise to achieve the best possible results for you.</p>
+                    </div>
+                    <button 
+                        onClick={() => setPage({ name: 'Services' })}
+                        className="mt-6 md:mt-0 text-brand-dark font-bold hover:text-brand-blue transition-colors flex items-center group"
+                    >
+                        Explore more
+                        <RightArrowIcon className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+                    </button>
+                </div>
             </AnimatedSection>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {services.map((service, index) => (
@@ -619,7 +632,7 @@ const HomePage = ({ setPage }: { setPage: (page: PageState) => void }) => (
     <>
         <HeroSection setPage={setPage} />
         <AboutSummarySection setPage={setPage} />
-        <ServicesSummarySection />
+        <ServicesSummarySection setPage={setPage} />
         <PopularCasesSection setPage={setPage} />
         <TestimonialsSection />
         <TeamSection />
