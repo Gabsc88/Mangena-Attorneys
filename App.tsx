@@ -251,10 +251,10 @@ const AboutSummarySection = ({ setPage }: { setPage: (page: PageState) => void }
 
 
 const services = [
-    { image: "https://i.postimg.cc/XNB4dXVK/criminal-8444883-1280.jpg", title: "Litigation & Dispute Resolution", description: "Civil litigation, criminal litigation, commercial disputes and labour law matters handled with diligence and strategic clarity." },
-    { image: "https://i.postimg.cc/qqyPYhR9/lady-justice-2388500-1280.jpg", title: "Family & Personal Law", description: "Divorce, child and spousal maintenance, domestic violence matters and related family law disputes managed with care and firmness." },
-    { image: "https://i.postimg.cc/SKPHx7YB/man-5806012-1280.jpg", title: "Claims & Compensation", description: "Third-party claims, RAF matters and medical negligence cases pursued thoroughly to protect your rightful compensation." },
-    { image: "https://i.postimg.cc/PrH9JqN5/right-4944555-1280.jpg", title: "Legal Protection & Planning", description: "Drafting of contracts and wills, deceased estates administration and debt collection services. And Immigration & Refugee legal matters" },
+    { image: "https://i.postimg.cc/XNB4dXVK/criminal-8444883-1280.jpg", title: "Civil & Commercial Litigation", description: "We provide expert representation in legal disputes between individuals and businesses. Our team focuses on protecting your interests while achieving efficient, strategic resolutions." },
+    { image: "https://i.postimg.cc/qqyPYhR9/lady-justice-2388500-1280.jpg", title: "Criminal Litigation", description: "Our firm offers a robust defense for individuals facing various criminal charges. We ensure your rights are protected throughout every stage of the legal process." },
+    { image: "https://i.postimg.cc/SKPHx7YB/man-5806012-1280.jpg", title: "Family Law & Maintenance", description: "We handle sensitive matters including divorce, child maintenance, and spousal support. Our approach prioritizes your family's well-being and legal protection during transitions." },
+    { image: "https://i.postimg.cc/PrH9JqN5/right-4944555-1280.jpg", title: "Labour & Employment Law", description: "We offer comprehensive advice on workplace relationships and statutory compliance. Our experts represent both employers and employees in complex labour-related disputes." },
 ];
 
 const ServicesSummarySection = ({ setPage }: { setPage: (page: PageState) => void }) => (
@@ -658,11 +658,11 @@ const OurStorySection = () => (
                         </p>
                          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 text-center">
                             <div className="border-t-2 border-brand-blue pt-4">
-                                <p className="text-4xl font-serif font-bold text-brand-dark">2010</p>
+                                <p className="text-4xl font-serif font-bold text-brand-dark">2018</p>
                                 <p className="text-brand-dark/50 text-sm">Founded</p>
                             </div>
                              <div className="border-t-2 border-brand-blue pt-4">
-                                <p className="text-4xl font-serif font-bold text-brand-dark">1K+</p>
+                                <p className="text-4xl font-serif font-bold text-brand-dark">70+</p>
                                 <p className="text-brand-dark/50 text-sm">Cases Won</p>
                             </div>
                              <div className="border-t-2 border-brand-blue pt-4">
@@ -711,8 +711,11 @@ const AboutPage = ({ setPage }: { setPage: (page: PageState) => void }) => (
 
 const detailedServices = [
     ...services,
-    { image: "https://i.postimg.cc/B6TW7PtR/judgement-6722634-1280.jpg", title: "Real Estate Law", description: "Expert guidance on all aspects of real estate transactions, from residential closings to complex commercial development." },
-    { image: "https://i.postimg.cc/Wz8BTRGn/purchase-3113198-1280.jpg", title: "Intellectual Property", description: "Protecting your innovations and creative works with comprehensive trademark, copyright, and patent services." },
+    { image: "https://i.postimg.cc/B6TW7PtR/judgement-6722634-1280.jpg", title: "Third Party Claims & RAF", description: "We assist motor vehicle accident victims in navigating Road Accident Fund claims. Our goal is to secure the full compensation you deserve for your injuries and losses." },
+    { image: "https://i.postimg.cc/Wz8BTRGn/purchase-3113198-1280.jpg", title: "Medical Negligence", description: "We provide specialized support for those harmed by substandard medical care. Our firm holds responsible parties accountable to pursue justice for your recovery." },
+    { image: "https://i.postimg.cc/QtL6Nd0R/alvaro-serrano-hjw-KMkeh-Bco-unsplash.jpg", title: "Wills & Deceased Estates", description: "We offer professional guidance in drafting Wills and administering deceased estates. We ensure your legacy is protected and your final wishes are executed accurately." },
+    { image: "https://i.postimg.cc/T20cF0Mz/metin-ozer-sp-FYb-CSF-Ec-unsplash.jpg", title: "Immigration & Refugee Law", description: "Our team navigates the complexities of visa applications and residency permits. We provide dedicated legal assistance to protect the rights of refugees and immigrants." },
+    { image: "https://i.postimg.cc/PqnZPvnF/cytonn-photography-GJao3ZTX9g-U-unsplash.jpg", title: "Debt Collection & Contracts", description: "We provide efficient recovery services and the drafting of legally sound agreements. Our focus is on securing your financial assets and minimizing your commercial risk." },
 ];
 
 const ServicesPage = ({ setPage }: { setPage: (page: PageState) => void }) => (
